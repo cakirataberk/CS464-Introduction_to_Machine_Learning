@@ -1,0 +1,49 @@
+Style Transfer:
+
+- Image Content, Image Style
+- The aim of Style Transfer is to combine contents of a given image with the style of the completely different image.
+- We will accept human portraits or selfies and transform thier style to different paintings.
+- Different Painting Styles such as Modernism, Impressionism, Expressionism can be used for the new style of input image. 
+	- (http://www.kokuyocamlin.com/blog/world-art-day-understanding-different-painting-styles-part-1.html)
+
+- Input Image (Image Content) + Style Image (Image Style) -> Target Image
+
+- core content of the input image stays the same while its style is completely different.
+- can use CNNs
+- can use Transfer Learning (pre-trained models), (VGG-19 model can be used since it has enough complexity for this task)
+	- 16 Convolutional layers + 3 Fully connected layers + 5 Max Pooling layers
+
+- no analyzes (no accuracy or any other metrics)
+- Style Transfer can be done using mainly feature extraction from standard CNNs.
+	- These features will be manipulated to extract style or content information (2 Gram Matricies will be matched).
+
+- PyTorch package will be used.
+- CUDA can be used to speed the process up.
+
+- need 2 Datasets;
+	- Input Image (Portraits/Selfies) Dataset
+		- Matting Human Datasets			(Kaggle), (https://www.kaggle.com/laurentmih/aisegmentcom-matting-human-datasets)
+		- Selfiecity 						(http://selfiecity.net/#imageplots)
+		- UCF Selfie Dataset				(https://www.crcv.ucf.edu/data/Selfie/)
+		- Selfie Image Detection Dataset	(Kaggle), (https://www.kaggle.com/jigrubhatt/selfieimagedetectiondataset/version/1)
+
+	- Styple Image (Paintings) Dataset
+		- Paintings 						(Kaggle), (https://www.kaggle.com/miroslavsabo/paintings)
+		- Van Gogh Paintings 				(Kaggle), (https://www.kaggle.com/ipythonx/van-gogh-paintings)
+		- Best Artworks of All Time 		(Kaggle), (https://www.kaggle.com/ikarus777/best-artworks-of-all-time)
+		- Portrait Paintings 				(Kaggle), (https://www.kaggle.com/deewakarchakraborty/portrait-paintings)
+
+
+Extra Resources:
+	- Style Transfer - Styling Images with Convolutional Neural Networks (Medium), 
+		(https://gsurma.medium.com/style-transfer-styling-images-with-convolutional-neural-networks-7d215b58f461)
+		(https://www.kaggle.com/greg115/style-transfer)
+
+	- Style Transfer Deep Learning Algorithm (Kaggle), (https://www.kaggle.com/basu369victor/style-transfer-deep-learning-algorithm)
+
+	- Artistic Neural Style Transfer using PyTorch (Kaggle), 
+		(https://www.kaggle.com/soumya044/artistic-neural-style-transfer-using-pytorch)
+
+	- Neural Style Transfer using VGG19 (Kaggle), (https://www.kaggle.com/sayakdasgupta/neural-style-transfer-using-vgg19)
+
+
